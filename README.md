@@ -1,1 +1,2 @@
 # discordtrolltool
+いやv9にしただけだから
