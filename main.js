@@ -52,7 +52,7 @@
             var m = str.match(/([0-9]+)\/([0-9]+)/);
             if(!m) return;
             var room_id = m[2];
-            var url = `https://discordapp.com/api/v6/channels/${room_id}/typing`;
+            var url = `https://discordapp.com/api/v9/channels/${room_id}/typing`;
             splitLine(input_token.val()).map(function(v,i){
                 var xhr = new XMLHttpRequest();
                 xhr.open( 'POST', url );
@@ -130,7 +130,7 @@
                 tts: false
             };
             var xhr = new XMLHttpRequest();
-            xhr.open( 'POST', `https://canary.discordapp.com/api/v6/channels/${id}/messages` );
+            xhr.open( 'POST', `https://canary.discordapp.com/api/v9/channels/${id}/messages` );
             xhr.setRequestHeader( "authorization", token );
             xhr.setRequestHeader( "content-type", "application/json" );
             xhr.send(JSON.stringify(data));
